@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site da Kelly</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <h1>Site da Kelly</h1>
+    </header>
+    <div class="container">
+        <div class="tabs">
+            <button class="tablink" onclick="openTab(event, 'motivos')">Motivos para Ter Aula com a Kelly</button>
+            <button class="tablink" onclick="openTab(event, 'amizade')">Motivos para Ser Amigo da Kelly</button>
+            <button class="tablink" onclick="openTab(event, 'etec')">Motivos para Voltar para a Escola ETEC</button>
+            <button class="tablink" onclick="openTab(event, 'aprendizado')">Coisas que Aprendi com a Kelly</button>
+            <button class="tablink" onclick="openTab(event, 'mensagens')">Mensagens para Kelly</button>
+        </div>
+
+        <div id="motivos" class="tabcontent">
+            <h2>Motivos para Ter Aula com a Kelly</h2>
+            <ul>
+                <li>Educadora experiente e dedicada.</li>
+                <li>Aulas personalizadas para seu aprendizado.</li>
+                <li>Ambiente de aprendizado amigável e acolhedor.</li>
+                <li>Resultados comprovados de alunos satisfeitos.</li>
+                <li>Flexibilidade de horários para atender às suas necessidades.</li>
+            </ul>
+            <img src="https://media.licdn.com/dms/image/D4D03AQG-4S_s160UrA/profile-displayphoto-shrink_800_800/0/1673649279998?e=2147483647&v=beta&t=OOySmxbKlq1CmGcKnF7wUtiKeEpVrrw0jRHbWWmP1F0" alt="Foto da Kelly" class="profile-image">
+
+        </div>
+
+        <div id="amizade" class="tabcontent">
+            <h2>Motivos para Ser Amigo da Kelly</h2>
+            <ul>
+                <li>Amizade sincera e leal.</li>
+                <li>Companhia agradável e divertida.</li>
+                <li>Conselhos e apoio em momentos difíceis.</li>
+                <li>Boas risadas e memórias inesquecíveis.</li>
+                <li>Kelly é uma pessoa incrível para se ter como amiga.</li>
+            </ul>
+            <img src="https://media.licdn.com/dms/image/D4D03AQG-4S_s160UrA/profile-displayphoto-shrink_800_800/0/1673649279998?e=2147483647&v=beta&t=OOySmxbKlq1CmGcKnF7wUtiKeEpVrrw0jRHbWWmP1F0" alt="Foto da Kelly" class="profile-image">
+
+        </div>
+
+        <div id="etec" class="tabcontent">
+            <h2>Motivos para Voltar para a Escola ETEC</h2>
+            <ul>
+                <li>Educação de alta qualidade.</li>
+                <li>Oportunidades de aprendizado avançado.</li>
+                <li>Preparação para o mercado de trabalho.</li>
+                <li>Excelentes professores e recursos educacionais.</li>
+                <li>Networking e amizades duradouras.</li>
+            </ul>
+            <img src="https://media.licdn.com/dms/image/D4D03AQG-4S_s160UrA/profile-displayphoto-shrink_800_800/0/1673649279998?e=2147483647&v=beta&t=OOySmxbKlq1CmGcKnF7wUtiKeEpVrrw0jRHbWWmP1F0" alt="Foto da Kelly" class="profile-image">
+
+        </div>
+
+        <div id="aprendizado" class="tabcontent">
+            <h2>Coisas que Aprendi com a Kelly</h2>
+            <ul>
+                <li>Importância da persistência.</li>
+                <li>Amor pelo conhecimento e aprendizado contínuo.</li>
+                <li>Empatia e compreensão pelos outros.</li>
+                <li>Valor da amizade verdadeira.</li>
+                <li>Confiança em mim mesmo.</li>
+            </ul>
+            <img src="https://media.licdn.com/dms/image/D4D03AQG-4S_s160UrA/profile-displayphoto-shrink_800_800/0/1673649279998?e=2147483647&v=beta&t=OOySmxbKlq1CmGcKnF7wUtiKeEpVrrw0jRHbWWmP1F0" alt="Foto da Kelly" class="profile-image">
+
+        </div>
+
+        <div id="mensagens" class="tabcontent">
+            <h2>Mensagens para Kelly</h2>
+            <ul>
+                <li>Obrigado por ser uma educadora incrível!</li>
+                <li>Sua amizade é um tesouro inestimável.</li>
+                <li>Voltar para a escola ETEC foi uma ótima decisão.</li>
+                <li>Grato por todas as lições de vida que você me ensinou.</li>
+                <li>Você é uma pessoa especial em minha vida.</li>
+            </ul>
+            <p>
+                <a href="https://br.linkedin.com/in/kelly-c-ribeir0" target="_blank">Você quer uma professora legal e inteligente? Contrate!</a>
+            </p>
+
+            <img src="https://media.licdn.com/dms/image/D4D03AQG-4S_s160UrA/profile-displayphoto-shrink_800_800/0/1673649279998?e=2147483647&v=beta&t=OOySmxbKlq1CmGcKnF7wUtiKeEpVrrw0jRHbWWmP1F0" alt="Foto da Kelly" class="profile-image">
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Abrir o primeiro tab por padrão
+        document.getElementById("motivos").style.display = "block";
+        document.getElementsByClassName("tablink")[0].className += " active";
+    </script>
+</body>
+</html>
